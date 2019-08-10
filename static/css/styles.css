@@ -22,8 +22,9 @@ html {
 }
 
 #registerLoginForm {
-	top:200px;
-	height:500px;
+	top:20vh;
+	height:65vh;
+	margin-bottom: 15vh;
 }
 
 #logoutOverlay {
