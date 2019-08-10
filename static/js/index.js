@@ -1,7 +1,10 @@
 $(document).ready(()=>{
 	$('#registerNavLink').on('click', ()=>{
+		// Display Overlay
 		document.getElementById('overlay').style.display = 'flex';
-
+		// Collapse Dropdown Menu
+		document.getElementById('navDropdown').classList.remove('show');
+		
 		if(document.getElementById('loginNav').classList.contains('active')){
 			console.log('need to change');
 			document.getElementById('registerNav').classList.add('active');
@@ -15,7 +18,11 @@ $(document).ready(()=>{
 		}
 	});
 	$('#loginNavLink').on('click', ()=>{
+		// Display Overlay
 		document.getElementById('overlay').style.display='flex';
+		// Close Dropdown Menu
+		document.getElementById('navDropdown').classList.remove('show');
+
 		if(document.getElementById('registerNav').classList.contains('active')){
 			console.log('need to change');
 			document.getElementById('registerNav').classList.remove('active');

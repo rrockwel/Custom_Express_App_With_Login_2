@@ -64,3 +64,8 @@ html {
 .dropdown-item {
 	opacity: 1;
 }
+
+.tab-content {
+	overflow-y:scroll;
+	height: 50vh;
+}
