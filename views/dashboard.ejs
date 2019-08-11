@@ -33,6 +33,14 @@
 			<li class="nav-item">
 				<a href="#" class="nav-link">Membership Plans</a>
 			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link" id='contactNav'>Contact</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link" id='feedbackNav'>Feedback</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto mr-2">
 			<li class="nav-item logout ml-auto">
 				<a href="#" class='nav-link' id='logoutNavLink'>Logout</a>
 			</li>
@@ -45,15 +53,10 @@
 	<% include ./partials/messages %>
 </div>
 
-<div id="logoutOverlay">
-	<form id='logoutForm'>
-		<h4 class='text-light text-center'>Are you sure you want to logout?</h4>
-		<div id='button-container'>
-			<button class='btn btn-primary m-2' id='logoutConfirm'><a href='/users/logout' id='yes'>Yes</a></button>
-			<button type='submit' class='btn btn-primary m-2' id='logoutCancel'>No</button>
-		</div>
-	</form>
-</div>
+	<% include ./partials/logoutOverlay %>
+	<% include ./partials/feedbackForm %>
+	<% include ./partials/contactForm %>
+
 
 
 	<!-- jQuery first, then Popper, then Bootstrap JS -->

@@ -70,3 +70,45 @@ html {
 	overflow-y:scroll;
 	height: 50vh;
 }
+
+#feedback {
+	position: fixed; /* Sit on top of page content */
+	display: none; /* Hidden By Default */
+	width: 100%; /* Full Width (cover entire page) */
+	height: 100%; /* Full Height (cover entire page) */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+	z-index: 2;
+	cursor: pointer; /* Add Pointer On Hover */
+	justify-content: center;
+}
+
+#feedbackForm {
+	top:20vh;
+	height:65vh;
+	margin-bottom: 15vh;
+}
+
+#contact {
+	position: fixed; /* Sit on top of page content */
+	display: none; /* Hidden By Default */
+	width: 100%; /* Full Width (cover entire page) */
+	height: 100%; /* Full Height (cover entire page) */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+	z-index: 2;
+	cursor: pointer; /* Add Pointer On Hover */
+	justify-content: center;
+}
+
+#contactForm {
+	top:20vh;
+	height:65vh;
+	margin-bottom: 15vh;	
+}

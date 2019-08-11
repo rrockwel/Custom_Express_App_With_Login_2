@@ -14,6 +14,7 @@
 </head>
 <body>
 
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<a href="#" class="navbar-brand"><img src='https://via.placeholder.com/30' class='mr-2'>Fitness Trainer</a>
 	<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navDropdown' aria-controls='navDropdown' aria-expanded='false' aria-label='Toggle Navigation'>
@@ -33,10 +34,10 @@
 				</div>
 			</li>
 			<li class="nav-item">
-				<a href="#" class="nav-link">Contact</a>
+				<a href="#" class="nav-link" id='contactNav'>Contact</a>
 			</li>
 			<li class="nav-item">
-				<a href="#" class="nav-link">Feedback</a>
+				<a href="#" class="nav-link" id='feedbackNav'>Feedback</a>
 			</li>
 		</ul>
 		<ul class='navbar-nav ml-auto mr-2'>
@@ -54,6 +55,7 @@
 <div id='messages' class='m-3'>
 	<% include ./partials/messages %>
 </div>
+
 
 
 
@@ -99,12 +101,15 @@
 						<input type='password' id='password2' name='password2' class='form-control' value="<% typeof password2 != 'undefined' ? password2 : '' %>">
 					</div>
 					<button type='submit' class='btn btn-primary btn-block'>Register</button>
-					
 				</form>
 			</div>
 		</div>
 	</div>
 </div>
+
+	<% include ./partials/feedbackForm %>
+	<% include ./partials/contactForm %>
+
 
 
 
