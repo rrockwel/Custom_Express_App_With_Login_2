@@ -11,7 +11,7 @@ const app =  express();
 require('./config/passport')(passport);
 
 // Connect To MongoDB Locally
-const mongoUrl = 'mongodb://127.0.0.1:27017/fitness';
+const mongoUrl = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/fitness';
 mongoose.connect(mongoUrl, {useNewUrlParser:true})
 	.then(
 		()=>{console.log(`MongoDB connected on ${mongoUrl}`)},
