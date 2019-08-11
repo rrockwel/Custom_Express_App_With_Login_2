@@ -44,6 +44,8 @@ $(document).ready(()=>{
 	// Bring up logout verification overlay form when logout nav is clicked
 	$('#logoutNavLink').on('click', ()=>{
 		document.getElementById('logoutOverlay').style.display = 'flex';
+		// Collapse Dropdown Menu
+		document.getElementById('navDropdown').classList.remove('show');
 	});
 	// Close logout overlay if logout 'no' is clicked
 	$('#logoutCancel').on('click', ()=>{
@@ -51,12 +53,15 @@ $(document).ready(()=>{
 	});
 	// Display feedback overlay when feedback nav is clicked
 	$('#feedbackNav').on('click', ()=>{
-		console.log('display feedback form');
 		document.getElementById('feedback').style.display = 'flex';
+		// Collapse Dropdown Menu
+		document.getElementById('navDropdown').classList.remove('show');
 	});
 	// Close feedback overlay when x is clicked
 	$('#closeFeedbackForm').on('click', ()=>{
-		console.log('closing feedbackForm');
+		document.getElementById('feedback').style.display = 'none';
+	});
+	$('#altcloseFeedbackForm').on('click', ()=>{
 		document.getElementById('feedback').style.display = 'none';
 	});
 
@@ -64,9 +69,14 @@ $(document).ready(()=>{
 	// Display Contact overlay when contact nav is clicked
 	$('#contactNav').on('click', ()=>{
 		document.getElementById('contact').style.display = 'flex';
+		// Collapse Dropdown Menu
+		document.getElementById('navDropdown').classList.remove('show');
 	});
 	// Close contact overlay when x is clicked
 	$('#closeContactForm').on('click', ()=>{
+		document.getElementById('contact').style.display = 'none';
+	});
+	$('#altCloseContactForm').on('click', ()=>{
 		document.getElementById('contact').style.display = 'none';
 	});
 
