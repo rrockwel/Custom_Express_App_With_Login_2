@@ -1,12 +1,58 @@
-html {
-	/*background-image: url('https://www.torontomomnow.com/wp-content/uploads/2014/05/mom-with-kids-running.jpg');
-	*/background-image: url('https://images.squarespace-cdn.com/content/v1/54a7e165e4b0c9d38e0fe392/1421188727205-8TTM9ZVWR79XQLX650D1/ke17ZwdGBToddI8pDm48kOggE0Ch6pMGalwtLMqzsSB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Ufo5RWkg_J4of0jUNHaDHx6pZKBvpVYzidBWCapg0tuoMuEaB2HPGSYDV-11UTcW2g/path-running-feet.jpg?format=1500w');
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	height: 100%;
+/* XS Background Image */
+@media(max-width: 575px){
+
+body {
+	background: url('/main/img/background-xs.jpg');
+	background-size: 100vw 100vh;
+	z-index:999;
+	}
+}
+/* SM Background Image */
+@media (min-width: 576px) and (max-width:767px){
+	body {
+	background: url('/main/img/background-sm.jpg');
+	background-size: 100vw 100vh;
+	z-index:999;
+	}
+
 }
 
-#overlay, #logoutOverlay, #feedback, #contact {
+/* MD Background Image */
+@media (min-width: 768px){
+	body {
+		background-image: url('/main/img/background-md.jpg');
+		background-size: 100vw 100vh;
+		z-index:999;
+	}
+}
+
+/* LG Background Imag0e */
+@media (min-width: 992px){
+	body {
+		background-image: url('/main/img/background-lg.jpg');
+		background-size: 100vw 100vh;
+		z-index:999;
+	}
+}
+
+/* XL Background Image */
+@media (min-width: 1200px){
+	body {
+		background-image: url('/main/img/background-xl.jpg');
+		background-size:100vw 100vh;
+		z-index:;
+	}
+}
+
+/* Bigger Screens */
+@media(min-width: 1500px){
+	html{
+		background-image: url('/main/img/background-xxl.jpg');
+		background-size: 100vw 100vh;
+		z-index:1;
+	}
+}
+#overlay, #logoutOverlay, #feedback, #contact, #certifications {
 	position: fixed; /* Sit on top of page content */
 	display: none; /* Hidden By Default */
 	width: 100%; /* Full Width (cover entire page) */
@@ -21,7 +67,7 @@ html {
 	justify-content: center;
 }
 
-#registerLoginForm, #feedbackForm, #contactForm {
+#registerLoginForm, #feedbackForm, #contactForm, #certificationsCarousel {
 	top:20vh;
 	height:65vh;
 	margin-bottom: 15vh;
@@ -29,7 +75,7 @@ html {
 
 #logoutOverlay {
 	position: fixed;
-	display: none;
+L	display: none;
 	width: 100%;
 	height: 100%;
 	top:0;
@@ -73,4 +119,85 @@ html {
 
 ::-webkit-scrollbar {
 	width:0px;
+}
+
+/* Footer */
+
+footer {
+	overflow-y: scroll;
+	overflow-x: scroll;
+	max-height: 250px;
+	position: fixed;
+	bottom:0;
+	width:100vw;
+	border-top: 1px solid white;
+}
+
+footer a {
+	text-decoration: none;
+	color: white;
+}
+
+footer a:hover {
+	color:pink;
+}
+
+footer .card, footer .card-header, footer .card-body, footer .list-group, footer .list-group-item {
+	background-color: transparent;
+	border: none;
+	text-decoration: none;
+}
+
+#searchQuestion {
+	max-width: 300px;
+}
+
+#footerSecondColumn{
+	margin-top:55px;
+}
+
+
+.fab {
+	font-size: 36px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+
+#social {
+	position: fixed;
+	right:0;
+	bottom: 50px;
+	right: 5vw;
+}
+
+.fa-facebook {
+	color: #4267b2;
+}
+
+.fa-twitter {
+	color: #38A1F3;
+}
+
+.fa-instagram {
+	color:  #231F20;
+}
+
+.fa-snapchat {
+	color: #FFFC00;
+}
+
+.fa-pinterest {
+	color: #BD081C
+}
+
+/* Certifications Carousel */
+
+.carousel-control-prev:hover, .carousel-control-next:hover{
+	background-color: grey;
+	opacity: .1; 
+}
+
+.carousel-item img {
+	max-height:250px;
 }

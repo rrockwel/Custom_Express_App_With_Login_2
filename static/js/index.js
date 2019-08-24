@@ -1,4 +1,18 @@
 $(document).ready(()=>{
+
+	// Display Certifications Carousel when Certicifcations Navlink is clicked
+	$('#certificationsNavLink').on('click', ()=>{
+		document.getElementById('certifications').style.display='flex';
+	});
+
+	$(document).click(function(e){
+		let target = e.target;
+		if(!$(target).is('#certificationsNavLink') && !$(target).is('#certificationsCarousel') && !$(target).parents().is('#certificationsCarousel')){
+			$('#certifications').hide();
+		}
+	})
+
+
 	$('#registerNavLink').on('click', ()=>{
 		// Display Overlay
 		document.getElementById('overlay').style.display = 'flex';
@@ -79,5 +93,8 @@ $(document).ready(()=>{
 	$('#altCloseContactForm').on('click', ()=>{
 		document.getElementById('contact').style.display = 'none';
 	});
+
+	// Enable Tooltips
+	$('[data-toggle="tooltip"]').tooltip();
 
 });

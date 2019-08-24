@@ -2,14 +2,17 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
+const bodyParser = require('body-parser');
 
 // User Model
 const User = require('../models/User');
 
+// Set body parser for form data
+router.use(bodyParser.json());
 
 // Register Handle
 router.post('/register', (req,res)=>{
-	const { name, email, password, password2 } = req.body;
+	const { name, email, password, password2, receiveEmails } = req.body;
 	let errors = [];
 
 	// Check Required Fields
@@ -55,9 +58,11 @@ router.post('/register', (req,res)=>{
 				const newUser = new User({
 					name,
 					email,
-					password
+					password,
+					receiveEmails
 				});
 				console.log(newUser);
+				console.log(req.body);
 
 				
 				// Hash Password
@@ -106,5 +111,9 @@ router.get('/logout', (req,res)=>{
 	
 	//res.redirect('layout');
 });
+
+// Set Up Nodemailer for Contact and Feedback Forms
+
+
 
 module.exports = router;
