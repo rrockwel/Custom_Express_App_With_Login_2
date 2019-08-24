@@ -1,3 +1,16 @@
 Title: Custom Express App with Login
 Author: Richard Rockwell
 URL: https://vast-peak-69945.herokuapp.com
+
+NPM Packages Used:
+
+BcryptJS
+Connect-Flash
+EJS
+Express
+Express-EJS-Layouts
+Express-Session
+Mongoose
+Nodemailer
+Passport
+Passport-Local
