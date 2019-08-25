@@ -40,7 +40,7 @@ router.post('/contact', (req,res)=>{
 	});
 
 	let mailOptions = {
-		to: 'hilliardalexandra@gmail.com',
+		to: 'vtboarder69@gmail.com',
 		subject: `Contact Received from ${req.body.contactName}`,
 		html: `${req.body.contactName} has asked: '${req.body.contactContent}'. They can be contacted at: ${req.body.contactEmail}`
 
